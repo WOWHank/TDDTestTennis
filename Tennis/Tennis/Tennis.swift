@@ -10,12 +10,23 @@ import Foundation
 class Tennis {
     private var leftScore = 0
     
+    let dict = [
+        0: "love",
+        1: "fifteen",
+        2: "thirty",
+    ]
+    
     func score() -> String {
+        guard let left = dict[leftScore] else { return "" }
+        
         if leftScore == 1 {
-            return "fifteen love"
+            return "\(left) love"
+        }
+        else if leftScore == 2 {
+            return "\(left) love"
         }
         
-        return "love all"
+        return "\(left) all"
     }
     
     func leftPlayerScore() {
