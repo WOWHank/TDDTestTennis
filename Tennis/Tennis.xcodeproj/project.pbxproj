@@ -14,7 +14,18 @@
 		3655FB0228F859120041D375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3655FB0128F859120041D375 /* Assets.xcassets */; };
 		3655FB0528F859120041D375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3655FB0328F859120041D375 /* LaunchScreen.storyboard */; };
 		3655FB0D28F859800041D375 /* Tennis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655FB0C28F859800041D375 /* Tennis.swift */; };
+		3655FB1528F859CD0041D375 /* TennisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655FB1428F859CD0041D375 /* TennisTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3655FB1628F859CD0041D375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3655FAED28F859100041D375 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3655FAF428F859100041D375;
+			remoteInfo = Tennis;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3655FAF528F859100041D375 /* Tennis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tennis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +37,19 @@
 		3655FB0428F859120041D375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3655FB0628F859120041D375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3655FB0C28F859800041D375 /* Tennis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tennis.swift; sourceTree = "<group>"; };
+		3655FB1228F859CD0041D375 /* TennisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TennisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3655FB1428F859CD0041D375 /* TennisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3655FAF228F859100041D375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3655FB0F28F859CD0041D375 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				3655FAF728F859100041D375 /* Tennis */,
+				3655FB1328F859CD0041D375 /* TennisTests */,
 				3655FAF628F859100041D375 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3655FAF528F859100041D375 /* Tennis.app */,
+				3655FB1228F859CD0041D375 /* TennisTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +90,14 @@
 				3655FB0C28F859800041D375 /* Tennis.swift */,
 			);
 			path = Tennis;
+			sourceTree = "<group>";
+		};
+		3655FB1328F859CD0041D375 /* TennisTests */ = {
+			isa = PBXGroup;
+			children = (
+				3655FB1428F859CD0041D375 /* TennisTests.swift */,
+			);
+			path = TennisTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +120,24 @@
 			productReference = 3655FAF528F859100041D375 /* Tennis.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3655FB1128F859CD0041D375 /* TennisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3655FB1828F859CD0041D375 /* Build configuration list for PBXNativeTarget "TennisTests" */;
+			buildPhases = (
+				3655FB0E28F859CD0041D375 /* Sources */,
+				3655FB0F28F859CD0041D375 /* Frameworks */,
+				3655FB1028F859CD0041D375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3655FB1728F859CD0041D375 /* PBXTargetDependency */,
+			);
+			name = TennisTests;
+			productName = TennisTests;
+			productReference = 3655FB1228F859CD0041D375 /* TennisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +150,10 @@
 				TargetAttributes = {
 					3655FAF428F859100041D375 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					3655FB1128F859CD0041D375 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3655FAF428F859100041D375;
 					};
 				};
 			};
@@ -119,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				3655FAF428F859100041D375 /* Tennis */,
+				3655FB1128F859CD0041D375 /* TennisTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +184,13 @@
 				3655FB0528F859120041D375 /* LaunchScreen.storyboard in Resources */,
 				3655FB0228F859120041D375 /* Assets.xcassets in Resources */,
 				3655FB0028F859100041D375 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3655FB1028F859CD0041D375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +208,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3655FB0E28F859CD0041D375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3655FB1528F859CD0041D375 /* TennisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3655FB1728F859CD0041D375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3655FAF428F859100041D375 /* Tennis */;
+			targetProxy = 3655FB1628F859CD0041D375 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3655FAFE28F859100041D375 /* Main.storyboard */ = {
@@ -338,6 +414,40 @@
 			};
 			name = Release;
 		};
+		3655FB1928F859CD0041D375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HankKuo.TennisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tennis.app/Tennis";
+			};
+			name = Debug;
+		};
+		3655FB1A28F859CD0041D375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HankKuo.TennisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tennis.app/Tennis";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +465,15 @@
 			buildConfigurations = (
 				3655FB0A28F859120041D375 /* Debug */,
 				3655FB0B28F859120041D375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3655FB1828F859CD0041D375 /* Build configuration list for PBXNativeTarget "TennisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3655FB1928F859CD0041D375 /* Debug */,
+				3655FB1A28F859CD0041D375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
