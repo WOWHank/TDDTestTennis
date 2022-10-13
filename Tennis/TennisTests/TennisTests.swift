@@ -6,15 +6,18 @@
 //
 
 import XCTest
+@testable import Tennis
 
 class TennisTests: XCTestCase {
 
+    var tennis: Tennis!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        tennis = Tennis()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        tennis = nil
     }
 
     func testExample() throws {
