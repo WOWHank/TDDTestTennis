@@ -9,8 +9,9 @@ import Foundation
 
 class Tennis {
     private var leftScore = 0
+    private var rightScore = 0
     
-    let dict = [
+    private let dict = [
         0: "love",
         1: "fifteen",
         2: "thirty",
@@ -19,6 +20,10 @@ class Tennis {
     
     func score() -> String {
         guard let left = dict[leftScore] else { return "" }
+        
+        if rightScore == 1 {
+            return "love fifteen"
+        }
         
         if leftScore == 1 {
             return "\(left) love"
@@ -37,4 +42,7 @@ class Tennis {
         leftScore += 1
     }
     
+    func rightPlayerScore() {
+        rightScore += 1
+    }
 }
