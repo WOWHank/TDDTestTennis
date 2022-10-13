@@ -9,17 +9,24 @@ import XCTest
 @testable import Tennis
 
 class TennisTests: XCTestCase {
-
+    
     var tennis: Tennis!
     
     override func setUpWithError() throws {
         tennis = Tennis()
     }
-
+    
     override func tearDownWithError() throws {
         tennis = nil
     }
-
+    
+    func testScoreFifteenLove() {
+        tennis.leftPlayerScore()
+        let score = tennis.score()
+        
+        XCTAssertEqual(score, "fifteen love")
+    }
+    
     func testScoreLoveAll() {
         let score = tennis.score()
         
