@@ -20,6 +20,13 @@ class TennisTests: XCTestCase {
         tennis = nil
     }
     
+    func testScoreLoveThirty() {
+        tennis.rightPlayerScore()
+        tennis.rightPlayerScore()
+        
+        XCTAssertEqual(tennis.score(), "love thirty")
+    }
+    
     func testScoreLoveFifteen() {
         tennis.rightPlayerScore()
         

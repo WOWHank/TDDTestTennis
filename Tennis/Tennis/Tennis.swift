@@ -24,6 +24,9 @@ class Tennis {
         if rightScore == 1 {
             return "love fifteen"
         }
+        else if rightScore == 2 {
+            return "love thirty"
+        }
         
         if leftScore == 1 {
             return "\(left) love"
