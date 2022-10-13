@@ -14,6 +14,7 @@ class Tennis {
         0: "love",
         1: "fifteen",
         2: "thirty",
+        3: "forty",
     ]
     
     func score() -> String {
@@ -23,6 +24,9 @@ class Tennis {
             return "\(left) love"
         }
         else if leftScore == 2 {
+            return "\(left) love"
+        }
+        else if leftScore == 3 {
             return "\(left) love"
         }
         
