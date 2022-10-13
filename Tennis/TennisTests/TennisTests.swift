@@ -20,15 +20,26 @@ class TennisTests: XCTestCase {
         tennis = nil
     }
     
+    func rughtPlayerScore(times: Int) {
+        for _ in 0..<times {
+            tennis.rightPlayerScore()
+        }
+    }
+    
+    func testScoreLoveForty() {
+        rughtPlayerScore(times: 3)
+        
+        XCTAssertEqual(tennis.score(), "love forty")
+    }
+    
     func testScoreLoveThirty() {
-        tennis.rightPlayerScore()
-        tennis.rightPlayerScore()
+        rughtPlayerScore(times: 2)
         
         XCTAssertEqual(tennis.score(), "love thirty")
     }
     
     func testScoreLoveFifteen() {
-        tennis.rightPlayerScore()
+        rughtPlayerScore(times: 1)
         
         XCTAssertEqual(tennis.score(), "love fifteen")
     }
