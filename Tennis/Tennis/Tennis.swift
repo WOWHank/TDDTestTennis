@@ -40,44 +40,52 @@ class Tennis {
             return scoreLookup()
         }
         
-        if rightScore > 2 {
-            return "deuce"
+        if isDeuce() {
+            return scoreDeuce()
         }
         
         return scoreAll()
     }
     
-    func scoreWin() -> String {
+    private func scoreDeuce() -> String {
+        return "deuce"
+    }
+    
+    private func isDeuce() -> Bool {
+        return leftScore >= 3
+    }
+    
+    private func scoreWin() -> String {
         return "\(advPlayer()) win"
     }
     
-    func scoreAdv() -> String {
+    private func scoreAdv() -> String {
         return "\(advPlayer()) adv"
     }
     
-    func isAdv() -> Bool {
+    private func isAdv() -> Bool {
         return abs(leftScore - rightScore) == 1
     }
     
-    func isReady() -> Bool {
+    private func isReady() -> Bool {
         return leftScore > 3 || rightScore > 3
     }
     
-    func advPlayer() -> String {
+    private func advPlayer() -> String {
         return (leftScore > 3) ? leftPlayerName : rightPlayerName
     }
     
-    func scoreLookup() -> String {
+    private func scoreLookup() -> String {
         guard let left = dict[leftScore], let right = dict[rightScore] else { return "" }
         
         return "\(left) \(right)"
     }
     
-    func isScoreDifferent() -> Bool {
+    private func isScoreDifferent() -> Bool {
         return rightScore != leftScore
     }
     
-    func scoreAll() -> String {
+    private func scoreAll() -> String {
         guard let score = dict[leftScore] else { return "" }
         
         return "\(score) all"
