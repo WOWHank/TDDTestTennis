@@ -19,10 +19,9 @@ class Tennis {
     ]
     
     func score() -> String {
-        guard let left = dict[leftScore], let right = dict[rightScore] else { return "" }
         
-        if rightScore != leftScore {
-            return "\(left) \(right)"
+        if isScoreDifferent() {
+            return scoreLookup()
         }
         
         if rightScore > 2 {
@@ -30,6 +29,16 @@ class Tennis {
         }
         
         return scoreAll()
+    }
+    
+    func scoreLookup() -> String {
+        guard let left = dict[leftScore], let right = dict[rightScore] else { return "" }
+        
+        return "\(left) \(right)"
+    }
+    
+    func isScoreDifferent() -> Bool {
+        return rightScore != leftScore
     }
     
     func scoreAll() -> String {
