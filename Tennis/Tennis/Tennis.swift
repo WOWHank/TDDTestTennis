@@ -22,6 +22,11 @@ class Tennis {
         guard let left = dict[leftScore], let right = dict[rightScore] else { return "" }
         
         if rightScore == leftScore {
+            
+            if rightScore > 2 {
+                return "deuce"
+            }
+            
             return "\(left) all"
         }
         
