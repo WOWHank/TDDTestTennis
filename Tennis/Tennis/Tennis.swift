@@ -12,6 +12,7 @@ class Tennis {
     private var rightScore = 0
     
     private var leftPlayerName = ""
+    private var rightPlayerName = ""
     
     private let dict = [
         0: "love",
@@ -20,8 +21,9 @@ class Tennis {
         3: "forty",
     ]
     
-    init(leftPlayerName: String) {
+    init(leftPlayerName: String, rightPlayerName: String) {
         self.leftPlayerName = leftPlayerName
+        self.rightPlayerName = rightPlayerName
     }
     
     func score() -> String {
@@ -30,6 +32,10 @@ class Tennis {
             
             if leftScore > 3 && abs(leftScore - rightScore) == 1 {
                 return "\(leftPlayerName) adv"
+            }
+            
+            if rightScore > 3 && abs(leftScore - rightScore) == 1 {
+                return "\(rightPlayerName) adv"
             }
             
             return scoreLookup()
