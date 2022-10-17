@@ -26,6 +26,13 @@ class TennisTests: XCTestCase {
         }
     }
     
+    func testScorethirtyAll() {
+        rightPlayerScore(times: 2)
+        leftPlayerScore(times: 2)
+        
+        XCTAssertEqual(tennis.score(), "thirty all")
+    }
+    
     func testScoreFifteenAll() {
         rightPlayerScore(times: 1)
         leftPlayerScore(times: 1)
