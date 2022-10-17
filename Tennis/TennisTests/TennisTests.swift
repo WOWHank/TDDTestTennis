@@ -31,6 +31,13 @@ class TennisTests: XCTestCase {
         rightPlayerScore(times: 3)
     }
     
+    func testScoreLeftWin() {
+        scoreDeuce()
+        leftPlayerScore(times: 2)
+        
+        XCTAssertEqual(tennis.score(), "A win")
+    }
+    
     func testScoreRightAdv() {
         scoreDeuce()
         rightPlayerScore(times: 1)

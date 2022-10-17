@@ -31,6 +31,10 @@ class Tennis {
         if isScoreDifferent() {
             
             if isAdv() {
+                if abs(leftScore - rightScore) == 2 {
+                    return "\(advPlayer()) win"
+                }
+                
                 return "\(advPlayer()) adv"
             }
             
