@@ -29,16 +29,13 @@ class Tennis {
     func score() -> String {
         
         if isScoreDifferent() {
-            
-            if isAdv() {
-                if abs(leftScore - rightScore) == 1 {
-                    return "\(advPlayer()) adv"
+            if isReady() {
+                if isAdv() {
+                    return scoreAdv()
                 }
                 
-                if abs(leftScore - rightScore) == 2 {
-                    return "\(advPlayer()) win"
-                }
-            } 
+                return scoreWin()
+            }
             
             return scoreLookup()
         }
@@ -50,7 +47,19 @@ class Tennis {
         return scoreAll()
     }
     
+    func scoreWin() -> String {
+        return "\(advPlayer()) win"
+    }
+    
+    func scoreAdv() -> String {
+        return "\(advPlayer()) adv"
+    }
+    
     func isAdv() -> Bool {
+        return abs(leftScore - rightScore) == 1
+    }
+    
+    func isReady() -> Bool {
         return leftScore > 3 || rightScore > 3
     }
     
