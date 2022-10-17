@@ -21,20 +21,21 @@ class Tennis {
     func score() -> String {
         guard let left = dict[leftScore], let right = dict[rightScore] else { return "" }
         
-        if rightScore == leftScore {
-            
-            if rightScore > 2 {
-                return "deuce"
-            }
-            
-            return "\(left) all"
-        }
-        
-        if rightScore > 0 || leftScore > 0 {
+        if rightScore != leftScore {
             return "\(left) \(right)"
         }
         
-        return "love all"
+        if rightScore > 2 {
+            return "deuce"
+        }
+        
+        return scoreAll()
+    }
+    
+    func scoreAll() -> String {
+        guard let score = dict[leftScore] else { return "" }
+        
+        return "\(score) all"
     }
     
     func leftPlayerScore() {
