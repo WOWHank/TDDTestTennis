@@ -13,7 +13,7 @@ class TennisTests: XCTestCase {
     var tennis: Tennis!
     
     override func setUpWithError() throws {
-        tennis = Tennis()
+        tennis = Tennis(leftPlayerName: "A")
     }
     
     override func tearDownWithError() throws {
@@ -24,6 +24,13 @@ class TennisTests: XCTestCase {
         for _ in 0..<times {
             tennis.rightPlayerScore()
         }
+    }
+    
+    func testScoreLeftAdv() {
+        rightPlayerScore(times: 3)
+        leftPlayerScore(times: 4)
+        
+        XCTAssertEqual(tennis.score(), "A adv")
     }
     
     func testScoreDeuce() {
